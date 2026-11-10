@@ -67,7 +67,7 @@ function App() {
 
   useEffect(() => {
     let alive = true;
-    supabase.auth.getSession().then(({ data, error }) => {
+    supabase.auth.getSession().then(async ({ data, error }) => {
       if (!alive) return;
       if (error) setErrorMessage(error.message);
       const sessionUser = data.session?.user ?? null;
