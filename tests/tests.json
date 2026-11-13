@@ -1,0 +1,113 @@
+[
+  {
+    "name": "Create one album and add photos with chosen captions and frames",
+    "sanity": true,
+    "viewport": "mobile",
+    "covers": [
+      "authentication redirect and restoration",
+      "profile picture requirement",
+      "single album per creator",
+      "multiple gallery photo uploads",
+      "custom photo caption",
+      "white cream or no-frame choice",
+      "album feed publication",
+      "database and storage persistence",
+      "owner album metadata editing",
+      "photo caption and rotation editing",
+      "photo removal",
+      "album soft deletion",
+      "create a replacement album after deletion"
+    ],
+    "description": "Verifies a creator can publish one album with selected photo notes and frame styling, and is prevented from creating a second.",
+    "steps": [
+      "Sign in and create a profile with a picture",
+      "Create an album with two or more photos",
+      "Enter a note to display beneath photos and choose a frame option",
+      "Publish the album and open it",
+      "Edit the album title, description and quote and save",
+      "Edit a photo caption and rotation and save",
+      "Remove one photo and confirm it disappears",
+      "Delete the album and confirm the action",
+      "Return to the profile and create a replacement album"
+    ],
+    "expected":      "The album and photo edits persist after reopening, the removed photo and album are no longer public, and the creator can create a replacement album."
+  },
+  {
+    "name": "Explore public albums and play soundtrack",
+    "viewport": "mobile",
+    "covers": [
+      "public discovery feed",
+      "album detail view",
+      "signed photo URLs",
+      "audio upload and playback",
+      "music stops when leaving album",
+      "responsive album layout"
+    ],
+    "description": "Verifies visitors can view photos and play the album soundtrack only while exploring the album.",
+    "steps": [
+      "Open Discover",
+      "Open an album with a soundtrack",
+      "Tap Play album song",
+      "Leave the album using Back to discover"
+    ],
+    "expected": "The album photos and soundtrack controls appear, and playback stops on exit."
+  },
+  {
+    "name": "Submit and approve special theme and verification applications",
+    "viewport": "desktop",
+    "covers": [
+      "special theme application",
+      "verification application",
+      "admin-only application review",
+      "approve and reject decisions",
+      "approved theme and verification badge"
+    ],
+    "description": "Verifies creators can apply for special themes and verification and the admin can review requests.",
+    "steps": [
+      "Sign in as a creator",
+      "Submit a special theme application and a verification application",
+      "Sign in with the allowlisted administrator account",
+      "Open Admin studio and approve both requests"
+    ],
+    "expected": "The requests are reviewed and approved theme and verification changes appear."
+  },
+  {
+    "name": "Customize album themes and soundtrack",
+    "viewport": "desktop",
+    "covers": [
+      "free theme selection",
+      "special theme approval",
+      "font selection",
+      "album layouts",
+      "animated intro",
+      "album theme display",
+      "soundtrack selection"
+    ],
+    "description": "Verifies album visual choices and optional soundtrack are retained when published.",
+    "steps": [
+      "Create an album with a free theme, selected font, layout and soundtrack",
+      "Open the album",
+      "Apply a special theme after admin approval"
+    ],
+    "expected": "The selected theme, layout and soundtrack appear in the album."
+  },
+  {
+    "name": "Enforce profile, album ownership and admin permissions",
+    "viewport": "desktop",
+    "covers": [
+      "missing profile picture guardrail",
+      "single album server-side restriction",
+      "owner-only photo upload",
+      "admin route authorization",
+      "public like count without optimistic double counting"
+    ],
+    "description": "Verifies server-side restrictions prevent duplicate albums and unauthorized changes.",
+    "steps": [
+      "Attempt to create an album without a profile picture",
+      "Create one album",
+      "Attempt to create a second album",
+      "Sign in as a regular account and attempt to open Admin studio"
+    ],
+    "expected": "Missing profile pictures and duplicate album creation are rejected, and non-admin accounts cannot access admin tools."
+  }
+]
