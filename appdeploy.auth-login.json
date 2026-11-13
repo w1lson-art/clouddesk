@@ -1,0 +1,17 @@
+{
+  "methods": [
+    "google",
+    "email"
+  ],
+  "headline": "Welcome back to AMORIA",
+  "subtitle": "Sign in with your Google account or receive a secure email sign-in link.",
+  "style": {
+    "mode": "light",
+    "accentColor": "#8f3f70",
+    "backgroundColor": "#f8f4f5",
+    "panelColor": "#ffffff",
+    "textColor": "#2c2027",
+    "fontFamily": "Inter, system-ui, sans-serif",
+    "borderRadius": 16
+  }
+}
